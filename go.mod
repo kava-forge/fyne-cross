@@ -2,7 +2,7 @@ module github.com/fyne-io/fyne-cross
 
 go 1.17
 
-replace github.com/fyne-io/fyne-cross => github.com/kava-forge/fyne-cross
+replace github.com/fyne-io/fyne-cross => .
 
 require (
 	github.com/BurntSushi/toml v1.3.2
