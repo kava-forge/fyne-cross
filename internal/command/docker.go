@@ -50,8 +50,10 @@ type localContainerImage struct {
 	runner *localContainerEngine
 }
 
-var _ containerEngine = (*localContainerEngine)(nil)
-var _ closer = (*localContainerImage)(nil)
+var (
+	_ containerEngine = (*localContainerEngine)(nil)
+	_ closer          = (*localContainerImage)(nil)
+)
 
 func (r *localContainerEngine) createContainerImage(arch Architecture, OS string, image string) containerImage {
 	ret := r.createContainerImageInternal(arch, OS, image, func(base baseContainerImage) containerImage {
@@ -74,6 +76,7 @@ func (*localContainerImage) close() error {
 }
 
 func AppendEnv(args []string, environs map[string]string, quoteNeeded bool) []string {
+	quoteNeeded = false
 	for k, v := range environs {
 		env := k + "=" + v
 		if quoteNeeded && strings.Contains(v, "=") {
