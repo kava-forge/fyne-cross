@@ -2,6 +2,8 @@ module github.com/fyne-io/fyne-cross
 
 go 1.17
 
+replace github.com/fyne-io/fyne-cross => github.com/kava-forge/fyne-cross
+
 require (
 	github.com/BurntSushi/toml v1.3.2
 	github.com/Kodeworks/golang-image-ico v0.0.0-20141118225523-73f0f4cfade9
