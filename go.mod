@@ -11,7 +11,7 @@ require (
 	github.com/stretchr/testify v1.9.0
 	github.com/urfave/cli/v2 v2.11.1
 	golang.org/x/sync v0.6.0
-	golang.org/x/sys v0.13.0
+	golang.org/x/sys v0.25.0
 	k8s.io/api v0.18.19
 	k8s.io/apimachinery v0.18.19
 	k8s.io/client-go v0.18.17
